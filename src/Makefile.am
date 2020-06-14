@@ -2,7 +2,7 @@ bin_PROGRAMS = ptunnel-ng
 man8_MANS = ptunnel-ng.8
 
 ptunnel_ng_CFLAGS = -Wall -Wextra
-ptunnel_ng_LDADD =
+ptunnel_ng_LDADD = -lsodium
 CLEANFILES =
 EXTTRA_DIST =
 
@@ -39,6 +39,7 @@ ptunnel_ng_CFLAGS += -fsanitize=address -fsanitize=leak -fsanitize=undefined
 endif
 
 ptunnel_ng_SOURCES = \
+	crypto-sodium.c \
 	md5.c \
 	challenge.c \
 	options.c \
