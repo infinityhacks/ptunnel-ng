@@ -74,7 +74,7 @@ struct option_usage {
 
 static const struct option_usage usage[] = {
 	/** --magic */
-	{"magic",        0, OPT_HEX32,  {.unum = 0xdeadc0de},
+	{"magic",        0, OPT_HEX32,  {.unum = kMagic_default},
 		"Set ptunnel magic hexadecimal number. (32-bit unsigned)\n"
 		"It is an identifier for all ICMP/UDP packets\n"
 		"and can be used to bypass Cisco IPS fingerprint scan.\n"

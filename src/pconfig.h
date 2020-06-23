@@ -47,6 +47,7 @@
 #define PCONFIG_H 1
 
 enum {
+    kMagic_default = 0xdeadc0de,
     /** Set this constant to the number of
      * concurrent connections you wish to handle by default.
      */
